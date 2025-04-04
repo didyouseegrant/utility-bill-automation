@@ -80,4 +80,4 @@ for src_row, dest_row in special_transfers.items():
 
 # Save the workbook
 wb.save(file_path)
-print("✅ Data successfully updated in 'Analysis' sheet with both special transfers and summed values.")
+print("Data successfully updated in 'Analysis' sheet with both special transfers and summed values.")
