@@ -1,32 +1,32 @@
 from openpyxl import load_workbook
 
 # Load the workbook with data_only=True to extract formula results instead of formulas
-file_path = "F:\\Accounts Payable\\Utilities\\Marin Sanitary Service\\2025\\test.xlsx"
+file_path = "path/to/your/input/folder/test.xlsx"
 wb = load_workbook(file_path, data_only=True)  # Ensures formulas return calculated values
 
 # Load relevant sheets
 source_ws = wb["Monthly Sorted by Prop"]
 analysis_ws = wb["Analysis"]
 
-# Mapping: Property Numbers (Column B in source) → Row Numbers in "Analysis" Sheet
+# Mapping: Property Numbers (Column B in source) → Row Numbers in "Analysis" Sheet - placeholder names
 property_mapping = {
-    "10": 5,   # BON AIR ONE CO.
-    "20": 6,   # BON AIR TWO CO.
-    "30": 7,   # BON AIR THREE CO.
-    "40": 8,   # BON AIR FOUR CO.
-    "45": 9,   # HUMMINGBIRD HILL, L.P.
-    "50": 10,  # BON AIR FIVE CO.
-    "60": 11,  # BON AIR SIX CO., L.P.
-    "70": 12,  # BON AIR SEVEN CO.
-    "80": 13,  # BELARDO CO., L.P.
-    "81": 14,  # BEL EAST, L.P.
-    "82": 15,  # BEL WEST, L.P.
-    "90": 16,  # GREENBRAE CO.
-    "92": 17,  # ELISEO APARTMENTS, L.P.
-    "200": 18, # MILLBRAE HIGHLANDS CO.
-    "1301": 19, # ELISEO OAKS, L.P.
-    "1300": 20, # ELISEO OAKS, L.P.
-    "611": 21  # SBCRE, L.P.
+    "10": 5,   # Property name
+    "20": 6,   # Property name
+    "30": 7,   # Property name
+    "40": 8,   # Property name
+    "45": 9,   # Property name
+    "50": 10,  # Property name
+    "60": 11,  # Property name
+    "70": 12,  # Property name
+    "80": 13,  # Property name
+    "81": 14,  # Property name
+    "82": 15,  # Property name
+    "90": 16,  # Property name
+    "92": 17,  # Property name
+    "200": 18, # Property name
+    "1301": 19, # Property name
+    "1300": 20, # Property name
+    "611": 21  # Property name
 }
 
 # Dictionaries to store sums by property for Column F and Column S
