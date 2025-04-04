@@ -9,6 +9,7 @@ source_ws = wb["Monthly Comparison"]
 analysis_ws = wb["Analysis"]
 
 # Mapping: Property Numbers (Column D in source) → Row Numbers in "Analysis" Sheet
+# These are placeholders
 property_mapping = {
     "10": 4,  # Property name
     "20": 5,   # Property name
