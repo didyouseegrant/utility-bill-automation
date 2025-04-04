@@ -7,16 +7,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 # Define ChromeDriver path
-chrome_driver_path = r"\\main-2019\rf$\gchrisman\Documents\Python\WinPython\python\chromedriver-win64\chromedriver.exe"
+chrome_driver_path = r"\gchrisman\Documents\Python\WinPython\python\chromedriver-win64\chromedriver.exe"
 service = Service(chrome_driver_path)
 
 # Define login credentials (Replace these with your actual credentials)
-USERNAME = "utilities@bonair.com"
-PASSWORD = "50Bonair200!"
+USERNAME = "email"
+PASSWORD = "password"
 
 # Define download directory
-download_directory = r"\\main-2019\rf$\gchrisman\Documents\test"
-#### "F:\Accounts Payable\Utilities\Marin Municipal Water\2025\Bills\02 February"
+download_directory = r"C:\Accounts Payable\Utilites\MMWD\Bills"
+
 
 # Set Chrome options
 chrome_options = webdriver.ChromeOptions()

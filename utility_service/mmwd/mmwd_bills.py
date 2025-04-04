@@ -4,18 +4,18 @@ from openpyxl import load_workbook  # For handling Excel files
 import os
 
 # Define paths
-pdf_folder = r"F:\Accounts Payable\Utilities\Marin Municipal Water\2025\Bills\02 February"
-excel_file = r"F:\Accounts Payable\Utilities\Marin Municipal Water\2025\MMWD 0225.xlsx"
+pdf_folder = r"C:\Accounts Payable\Utilites\MMWD\Bills"
+excel_file = r"C:\Accounts Payable\Utilites\MMWD\test.xlsx"
 sheet_name = "Monthly Comparison"  # Updated sheet name
 
 # List of account numbers in the required order
 pdf_order = [
-    573517, 573520, 573521, 573523, 573525, 573526, 573527, 573528, 573530, 
-    573531, 573532, 573534, 573535, 573536, 573537, 573538, 573539, 573540, 
-    573541, 573542, 573543, 573544, 573547, 573548, 573585, 573586, 573587, 
-    573589, 573590, 573592, 573594, 573595, 573597, 573598, 573599, 573600, 
-    573601, 573602, 573603, 573604, 573605, 573606, 573607, 573608, 573609, 
-    573610, 573611, 573612, 573613, 573614, 573615
+    111111, 222222, 333333, 444444, 555555, 666666, 777777, 888888, 999999, 
+    101111, 112222, 123333, 134444, 145555, 156666, 167777, 178888, 189999, 
+    191111, 202222, 213333, 224444, 235555, 246666, 257777, 268888, 279999, 
+    281111, 292222, 303333, 314444, 325555, 336666, 347777, 358888, 369999, 
+    371111, 382222, 393333, 404444, 415555, 426666, 437777, 448888, 459999, 
+    461111, 472222, 483333, 494444, 505555, 516666
 ]
 
 # Get all PDF files in the folder
@@ -76,5 +76,5 @@ for pdf_file in sorted_pdfs:
   
 
 # Save the updated Excel file
-wb.save("F:\\Accounts Payable\\Utilities\\Marin Municipal Water\\2025\\test.xlsx")
+wb.save("C:\\Accounts Payable\\Utilites\\MMWD\\test2.xlsx")
 print(":3 Data extraction and insertion completed successfully.")

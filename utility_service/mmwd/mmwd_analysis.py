@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 # Load the workbook with data_only=True to extract formula results instead of formulas
-file_path = "F:\\Accounts Payable\\Utilities\\Marin Municipal Water\\2025\\test.xlsx"
+file_path = "C:\\Accounts Payable\\Utilities\\MMWD\\test.xlsx"
 wb = load_workbook(file_path, data_only=True)  # Ensures formulas return calculated values
 
 # Load relevant sheets
@@ -10,30 +10,30 @@ analysis_ws = wb["Analysis"]
 
 # Mapping: Property Numbers (Column D in source) → Row Numbers in "Analysis" Sheet
 property_mapping = {
-    "611": 4,  # SBCRE, L.P.
-    "5": 5,   # GMI (YARD)
-    "5CAM": 6,   # CAM
-    "30/40/50": 7,   # BON AIR THREE CO.
-    "30/40/50": 8,   # BON AIR FOUR CO.
-    "45": 9,   # HUMMINGBIRD HILL, L.P.
-    "30/40/50": 10,  # BON AIR FIVE CO.
-    "60": 11,  # BON AIR SIX CO., L.P.
-    "70": 12,  # BON AIR SEVEN CO.
-    "80": 13,  # BELARDO CO., L.P (B52-B55)
-    "80P": 14, # BELARDO CO., L.P (80POOL2)
-    "81": 15,  # BEL EAST, L.P.
-    "82": 16,  # BEL WEST, L.P.
-    "82P": 17, # BEL WEST. L.P. (82POOL3)
-    "90": 18,  # GREENBRAE CO.
-    "92": 19,  # ELISEO APARTMENTS, L.P.
-    "200": 20, # MILLBRAE HIGHLANDS CO.
-    "SIC50": 21, # SICRE, INC. (50BAC)
-    "214P": 22, # SICRE, INC. (214POOL)
-    "222": 23, # BON AIR, L.P.
-    "BAC350": 24, # BON AIR DEVELOPMENT, L.P.
-    "1300": 25, # ELISEO OAKS, L.P.
-    "1301": 26, # ELISEO OAKS, L.P.
-    "501": 27 # 501 SFD
+    "611": 4,  # Property name
+    "5": 5,   # Property name
+    "5C": 6,   # Property name
+    "30": 7,   # Property name
+    "40": 8,   # Property name
+    "45": 9,   # Property name
+    "50": 10,  # Property name
+    "60": 11,  # Property name
+    "70": 12,  # Property name
+    "80": 13,  # Property name
+    "80P": 14, # Property name
+    "81": 15,  # Property name
+    "82": 16,  # Property name.
+    "82P": 17, # Property name
+    "90": 18,  # Property name
+    "92": 19,  # Property name
+    "200": 20, # Property name
+    "S50": 21, # Property name
+    "214P": 22, # Property name
+    "222": 23, # Property name
+    "350": 24, # Property name
+    "1300": 25, # Property name
+    "1301": 26, # Property name
+    "501": 27 # Property name
 }
 
 # Dictionaries to store sums by property for Column F and Column S
