@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 # Define ChromeDriver path
-chrome_driver_path = r"C:\gchrisman\Documents\python\chromedriver-win64\chromedriver.exe"
+chrome_driver_path = r"path/to/your/input/folder/chromedriver.exe"
 service = Service(chrome_driver_path)
 
 # Define login credentials (Replace these with your actual credentials)
@@ -15,7 +15,7 @@ USERNAME = "email"
 PASSWORD = "password"
 
 # Define download directory
-download_directory = r"C:\Accounts Payable\Utilites\MMWD\Bills"
+download_directory = r"path/to/your/input/folder"
 
 
 # Set Chrome options
@@ -113,3 +113,4 @@ for row in invoice_rows:
 
 # Close the browser
 driver.quit()
+print(f"Invoice download completed!")
