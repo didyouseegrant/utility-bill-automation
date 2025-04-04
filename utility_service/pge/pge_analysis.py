@@ -86,4 +86,4 @@ for prop_num in property_mapping.keys():
 
 # Save the workbook
 wb.save(file_path)
-print("✅ Data successfully updated in 'Analysis' sheet with both special transfers and summed values.")
+print("Data successfully updated in 'Analysis' sheet with both special transfers and summed values.")
