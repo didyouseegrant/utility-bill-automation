@@ -2,7 +2,7 @@ import os
 import re
 
 # Define the folder containing the PDFs
-folder_path = r"C:\\Accounts Payable\\Utilites\\MMWD\\Bills"
+folder_path = r"path/to/your/input/folder"
 
 # Define the list of new names
 new_names = [
