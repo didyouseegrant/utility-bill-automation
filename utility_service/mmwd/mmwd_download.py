@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 # Define ChromeDriver path
-chrome_driver_path = r"\gchrisman\Documents\Python\WinPython\python\chromedriver-win64\chromedriver.exe"
+chrome_driver_path = r"C:\gchrisman\Documents\python\chromedriver-win64\chromedriver.exe"
 service = Service(chrome_driver_path)
 
 # Define login credentials (Replace these with your actual credentials)
