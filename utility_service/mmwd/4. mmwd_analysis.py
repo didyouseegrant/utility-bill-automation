@@ -13,10 +13,10 @@ property_mapping = {
     "611": 4,  # Property name
     "5": 5,   # Property name
     "5C": 6,   # Property name
-    "30": 7,   # Property name
-    "40": 8,   # Property name
+    "30/40/50": 7,   # Property name
+    "30/40/50": 8,   # Property name
     "45": 9,   # Property name
-    "50": 10,  # Property name
+    "30/40/50": 10,  # Property name
     "60": 11,  # Property name
     "70": 12,  # Property name
     "80": 13,  # Property name
