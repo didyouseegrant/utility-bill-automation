@@ -71,7 +71,7 @@ for row in invoice_rows:
 
         # Check if the invoice date is in February 2025
         if invoice_date.startswith("2/") and invoice_date.endswith("/2025"):
-            print(f"✅ Match found! Processing invoice: {invoice_date}, Customer: {customer_no}")
+            print(f"Match found! Processing invoice: {invoice_date}, Customer: {customer_no}")
 
 	    # Store the handle of the original tab before opening the PDF
             original_window = driver.current_window_handle
