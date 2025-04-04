@@ -4,8 +4,8 @@ from openpyxl import load_workbook  # For handling Excel files
 import os
 
 # Define paths
-pdf_folder = r"C:\Accounts Payable\Utilites\MMWD\Bills"
-excel_file = r"C:\Accounts Payable\Utilites\MMWD\test.xlsx"
+pdf_folder = r"path/to/your/input/folder/"
+excel_file = r"path/to/your/input/folder/test.xlsx"
 sheet_name = "Monthly Comparison"  # Updated sheet name
 
 # List of account numbers in the required order
@@ -76,5 +76,5 @@ for pdf_file in sorted_pdfs:
   
 
 # Save the updated Excel file
-wb.save("C:\\Accounts Payable\\Utilites\\MMWD\\test2.xlsx")
+wb.save("path/to/your/input/folder/test.xlsx")
 print(":3 Data extraction and insertion completed successfully.")
