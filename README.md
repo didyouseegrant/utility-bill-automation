@@ -8,7 +8,7 @@ This project automates the processing of monthly utility bills for three major s
 
 - **Automated PDF downloads** via Selenium (MMWD & PG&E)
 - **File renaming** based on account numbers for easier tracking
-- **PDF parsing** using PyMuPDF to extract "Total Amount Due" (MMWD & MSS)
+- **PDF parsing** using PyMuPDF to extract "Total Amount Due" (MMWD & MSS) & "Total Gallon Used" (MMWD)
 - **Excel integration** with openpyxl to log and organize bill data
 - **Property-level categorization** across 25 managed properties
 
