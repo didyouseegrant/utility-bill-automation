@@ -4,21 +4,21 @@ from openpyxl import load_workbook  # For handling Excel files
 import os
 
 # Define paths
-pdf_folder = r"F:\Accounts Payable\Utilities\Marin Sanitary Service\2025\Bills\02. February"
-excel_file = r"F:\Accounts Payable\Utilities\Marin Sanitary Service\2025\MSS 0225.xlsx"
+pdf_folder = r"path/to/your/input/folder"
+excel_file = r"path/to/your/input/folder/test.xlsx"
 sheet_name = "Monthly Sorted by Prop"  # Updated sheet name
 
-# List of account numbers in the required order
+# List of account numbers in the required order - placeholder account numbers
 pdf_order = [
-    "51925", "51931", "51932", "51933", "51934", "51935", "51937", "51939",
-    "51940", "51941", "51942", "51943", "51944", "51945", "51946", "47569",
-    "47570", "47572", "47566", "47567", "47571", "47563", "47565", "47564",
-    "48057", "48058", "48056", "48055", "48054", "48053", "48051", "102324",
-    "102323", "2743", "48059", "48060", "48061", "48062", "2502", "2503",
-    "2504", "2486", "2488", "2493", "2489", "2481", "2482", "2484", "2485",
-    "2492", "2483", "2491", "2495", "2496", "2499", "2501", "2505", "2497",
-    "2695", "2521", "40852", "42847", "2500", "2490", "114265", "101779",
-    "27922", "2494"
+    "10001", "10002", "10003", "10004", "10005", "10006", "10007", "10008",
+    "10009", "10010", "10011", "10012", "10013", "10014", "10015", "20001",
+    "20002", "20003", "20004", "20005", "20006", "20007", "20008", "20009",
+    "30001", "30002", "30003", "30004", "30005", "30006", "30007", "400001",
+    "400002", "5001", "30008", "30009", "30010", "30011", "6001", "6002",
+    "6003", "6004", "6005", "6006", "6007", "6008", "6009", "6010", "6011",
+    "6012", "6013", "6014", "6015", "6016", "6017", "6018", "6019", "6020",
+    "7001", "7002", "80001", "80002", "6021", "6022", "900001", "900002",
+    "90001", "6023"
 ]
 
 # Get all PDF files in the folder
@@ -70,7 +70,7 @@ for pdf_file in sorted_pdfs:
             ws.cell(row=current_row, column=6, value=amount_due)  # Insert into next available row
 
     else:
-        print(f'❌ No amount found in {pdf_file}')
+        print(f'No amount found in {pdf_file}')
 
     # Move to the next row, except for special cases
     if "27922" not in pdf_file and "2494" not in pdf_file:
@@ -78,5 +78,5 @@ for pdf_file in sorted_pdfs:
   
 
 # Save the updated Excel file
-wb.save("F:\\Accounts Payable\\Utilities\\Marin Sanitary Service\\2025\\test.xlsx")
-print(":# Data extraction and insertion completed successfully.")
+wb.save("path/to/your/input/folder/test.xlsx")
+print(":D Data extraction and insertion completed successfully.")
