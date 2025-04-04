@@ -30,17 +30,17 @@ This project automates the processing of monthly utility bills for three major s
 ```plaintext
 ├── utility_service/
 │   ├── mmwd/
-│   │   ├── mmwd_download.py
-│   │   ├── mmwd_rename.py
-│   │   ├── mmwd_bills.py
-│   │   └── mmwd_analysis.py
+│   │   ├── 1. mmwd_download.py
+│   │   ├── 2. mmwd_rename.py
+│   │   ├── 3. mmwd_bills.py
+│   │   └── 4. mmwd_analysis.py
 │   ├── mss/
-│   │   ├── mss_bills.py
-│   │   └── mss_analysis.py
+│   │   ├── 1. mss_bills.py
+│   │   └── 2. mss_analysis.py
 │   ├── pge/
-│   │   ├── pge_download.py
-│   │   ├── pge_rename.py
-│   │   └── pge_analysis.py
+│   │   ├── 1. pge_download.py
+│   │   ├── 2. pge_rename.py
+│   │   └── 3. pge_analysis.py
 ├── sample_data/
 │   ├── sample_bills/
 │   │   ├── mmwd_sample_bill.pdf
