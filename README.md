@@ -42,7 +42,9 @@ This project automates the processing of monthly utility bills for three major s
 │   │   ├── pge_rename.py
 │   │   └── pge_analysis.py
 ├── sample_data/
-│   ├── sample_invoice.pdf
+│   ├── sample_bills/
+│   │   ├── mmwd_sample_bill.pdf
+│   │   └── mss_sample_bill.pdf
 │   └── sample_output.xlsx
 └── README.md
 ```
