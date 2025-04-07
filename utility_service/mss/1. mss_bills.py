@@ -62,9 +62,9 @@ for pdf_file in sorted_pdfs:
         print(f':D Found amount in {pdf_file}: {amount_due}')
         
         # Special case for accounts 27922 and 2494
-        if "27922" in pdf_file:
+        if "90001" in pdf_file:
             ws.cell(row=72, column=6, value=amount_due)  # Row 72, Column F (Excel column 6)
-        elif "2494" in pdf_file:
+        elif "6023" in pdf_file:
             ws.cell(row=75, column=6, value=amount_due)  # Row 75, Column F (Excel column 6)
         else:
             ws.cell(row=current_row, column=6, value=amount_due)  # Insert into next available row
@@ -73,7 +73,7 @@ for pdf_file in sorted_pdfs:
         print(f'No amount found in {pdf_file}')
 
     # Move to the next row, except for special cases
-    if "27922" not in pdf_file and "2494" not in pdf_file:
+    if "90001" not in pdf_file and "6023" not in pdf_file:
         current_row += 1
   
 
