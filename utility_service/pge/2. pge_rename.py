@@ -2,7 +2,7 @@ import os
 import re
 
 # Define the directory containing the PDF files
-directory = r"\\main-2019\rf$\gchrisman\Documents\test2"
+directory = r"//path//to//your//input//folder"
 
 # List of full account numbers - these are placeholders
 account_numbers = [
