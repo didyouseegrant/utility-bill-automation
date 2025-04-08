@@ -40,9 +40,10 @@ property_mapping = {
 }
 
 # Dictionaries to store sums by property for Column F and Column S
-property_sums_F = {key: 0 for key in property_mapping.keys()}  # Column F → Column E Current Charges in Analysis 
-property_sums_G = {key: 0 for key in property_mapping.keys()}  # Column G → Column F Check Charges in Analysis
-property_sums_W = {key: 0 for key in property_mapping.keys()}  # Column W → Column G Prior Year Charges in Analysis
+property_sums_F = {key: 0 for key in property_mapping.keys()}  # Column F -> Column E Current Charges in Analysis 
+property_sums_G = {key: 0 for key in property_mapping.keys()}  # Column G -> Column F Check Charges in Analysis
+property_sums_H = {key: 0 for key in property_mapping.keys()}  # Column H -> Column H Prior Month Charges in Analysis
+property_sums_W = {key: 0 for key in property_mapping.keys()}  # Column W -> Column G Prior Year Charges in Analysis
 
 
 # Iterate over source sheet (starting from row 4)
@@ -50,6 +51,7 @@ for row in range(4, source_ws.max_row + 1):
     property_value = str(source_ws.cell(row=row, column=4).value)  # Column D (Property)
     amount_F = source_ws.cell(row=row, column=6).value  # Column F (Current Charges)
     amount_G = source_ws.cell(row=row, column=7).value  # Column G (Check Charges)
+    amount_H = source_ws.cell(row=row, column=8).value  # Column H (Prior Month Charges)
     amount_W = source_ws.cell(row=row, column=23).value  # Column W (Prior Year Charges)
     
 
@@ -63,6 +65,11 @@ for row in range(4, source_ws.max_row + 1):
         if amount_G is not None:
             amount_G = float(str(amount_G).replace(",", ""))  # Convert amount to float
             property_sums_G[property_value] += amount_G
+
+        # Process Column H (Prior Month Charges)
+        if amount_H is not None:
+            amount_H = float(str(amount_H).replace(",", "")) # Convert amount to float
+            property_sums_H[property_value] += amount_H
 
         # Process Column S (Prior Year Charges)
         if amount_W is not None:
@@ -79,6 +86,7 @@ for prop_num in property_mapping.keys():
     row_number = property_mapping[prop_num]
     analysis_ws.cell(row=row_number, column=5, value=property_sums_F[prop_num])  # Column E for sums from Column F
     analysis_ws.cell(row=row_number, column=6, value=property_sums_G[prop_num])  # Column F for sums from Column G
+    analysis_ws.cell(row=row_number, column=4, value=property_sums_H[prop_num])  # Column H for sums from Column H
     analysis_ws.cell(row=row_number, column=7, value=property_sums_W[prop_num])  # Column G for sums from Column W
 
 
