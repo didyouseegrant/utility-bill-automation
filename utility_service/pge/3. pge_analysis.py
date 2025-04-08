@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 # Load the workbook with data_only=True to extract formula results instead of formulas
-file_path = "path/to/your/input/folder/test.xlsx
+file_path = "path/to/your/input/folder/test.xlsx"
 wb = load_workbook(file_path, data_only=True)  # Ensures formulas return calculated values
 
 # Load relevant sheets
