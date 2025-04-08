@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Define ChromeDriver path
-chrome_driver_path = r"path/to/your/input/folder/chromedriver.exe"
+chrome_driver_path = r"//path//to//your//input//folder//chromedriver.exe"
 service = Service(chrome_driver_path)
 
 # Define login credentials
