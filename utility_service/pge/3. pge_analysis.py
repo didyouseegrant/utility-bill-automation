@@ -42,7 +42,7 @@ property_mapping = {
 # Dictionaries to store sums by property for Column F and Column S
 property_sums_F = {key: 0 for key in property_mapping.keys()}  # Column F → Column E Current Charges in Analysis 
 property_sums_G = {key: 0 for key in property_mapping.keys()}  # Column G → Column F Check Charges in Analysis
-property_sums_X = {key: 0 for key in property_mapping.keys()}  # Column X → Column G Prior Year Charges in Analysis
+property_sums_W = {key: 0 for key in property_mapping.keys()}  # Column X → Column G Prior Year Charges in Analysis
 
 
 # Iterate over source sheet (starting from row 4)
@@ -50,7 +50,7 @@ for row in range(4, source_ws.max_row + 1):
     property_value = str(source_ws.cell(row=row, column=4).value)  # Column D (Property)
     amount_F = source_ws.cell(row=row, column=6).value  # Column F (Current Charges)
     amount_G = source_ws.cell(row=row, column=7).value  # Column G (Check Charges)
-    amount_X = source_ws.cell(row=row, column=24).value  # Column X (Prior Year Charges)
+    amount_W = source_ws.cell(row=row, column=23).value  # Column X (Prior Year Charges)
     
 
     if property_value in property_mapping:
@@ -65,9 +65,9 @@ for row in range(4, source_ws.max_row + 1):
             property_sums_G[property_value] += amount_G
 
         # Process Column S (Prior Year Charges)
-        if amount_X is not None:
-            amount_X = float(str(amount_X).replace(",", ""))  # Convert amount to float
-            property_sums_X[property_value] += amount_X
+        if amount_W is not None:
+            amount_W = float(str(amount_X).replace(",", ""))  # Convert amount to float
+            property_sums_W[property_value] += amount_W
 
 
 # Reload workbook in edit mode (without data_only=True) to write values
@@ -79,7 +79,7 @@ for prop_num in property_mapping.keys():
     row_number = property_mapping[prop_num]
     analysis_ws.cell(row=row_number, column=5, value=property_sums_F[prop_num])  # Column E for sums from Column F
     analysis_ws.cell(row=row_number, column=6, value=property_sums_G[prop_num])  # Column F for sums from Column G
-    analysis_ws.cell(row=row_number, column=7, value=property_sums_X[prop_num])  # Column G for sums from Column X
+    analysis_ws.cell(row=row_number, column=7, value=property_sums_W[prop_num])  # Column G for sums from Column X
 
 
 
