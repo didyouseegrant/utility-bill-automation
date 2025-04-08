@@ -1,13 +1,13 @@
 # Utility Bill Automation System
 
-This project automates the processing of monthly utility bills for three major service providers: Marin Municipal Water District (MMWD), Marin Sanitary Service (MSS), and PG&E. It streamlines downloading, renaming, parsing, and organizing over 160 utility bills each month using Python.
+This project automates the processing of monthly utility bills for three major service providers: Marin Municipal Water District (MMWD), Marin Sanitary Service (MSS), and PG&E. It streamlines downloading, renaming, parsing, and organizing over 160 utility bills each month using Python and Excel.
 
 ---
 
 ## Features
 
 - **Automated PDF downloads** via Selenium (MMWD & PG&E)
-- **File renaming** based on account numbers for easier tracking
+- **File renaming** based on account numbers for easier tracking (MMWD & PGE)
 - **PDF parsing** using PyMuPDF to extract "Total Amount Due" (MMWD & MSS) & "Total Gallon Used" (MMWD)
 - **Excel integration** with openpyxl to log and organize bill data
 - **Property-level categorization** across 25 managed properties
@@ -45,7 +45,9 @@ This project automates the processing of monthly utility bills for three major s
 │   ├── sample_bills/
 │   │   ├── mmwd_sample_bill.pdf
 │   │   └── mss_sample_bill.pdf
-│   └── sample_output.xlsx
+│   ├── mmwd_sample_bill.xlsx
+|   ├── mss_sample_bill.xlsx
+|   └── pge_sample_sheet.xlsx
 └── README.md
 ```
 
