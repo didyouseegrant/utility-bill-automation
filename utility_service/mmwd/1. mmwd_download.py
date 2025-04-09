@@ -69,8 +69,8 @@ for row in invoice_rows:
 
         print(f"Checking row - Invoice Date: {invoice_date}, Customer No: {customer_no}")
 
-        # Check if the invoice date is in February 2025
-        if invoice_date.startswith("2/") and invoice_date.endswith("/2025"):
+        # Check if the invoice date is in (Month) (Year)
+        if invoice_date.startswith("M/") and invoice_date.endswith("/YYYY"):
             print(f"Match found! Processing invoice: {invoice_date}, Customer: {customer_no}")
 
 	    # Store the handle of the original tab before opening the PDF
