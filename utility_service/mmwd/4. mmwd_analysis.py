@@ -37,10 +37,10 @@ property_mapping = {
 }
 
 # Dictionaries to store sums by property for Column F and Column S
-property_sums_G = {key: 0 for key in property_mapping.keys()}  # Column G → Column B in Analysis 
-property_sums_F = {key: 0 for key in property_mapping.keys()}  # Column F → Column F in Analysis
-property_sums_S = {key: 0 for key in property_mapping.keys()}  # Column S → Column C in Analysis
-property_sums_R = {key: 0 for key in property_mapping.keys()}  # Column R → Column G in Analysis
+property_sums_G = {key: 0 for key in property_mapping.keys()}  # Column G -> Column B in Analysis 
+property_sums_F = {key: 0 for key in property_mapping.keys()}  # Column F -> Column F in Analysis
+property_sums_S = {key: 0 for key in property_mapping.keys()}  # Column S -> Column C in Analysis
+property_sums_R = {key: 0 for key in property_mapping.keys()}  # Column R -> Column G in Analysis
 
 # Iterate over source sheet (starting from row 4)
 for row in range(4, source_ws.max_row + 1):
