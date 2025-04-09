@@ -8,7 +8,7 @@ wb = load_workbook(file_path, data_only=True)  # Ensures formulas return calcula
 source_ws = wb["Monthly Comparison"]
 analysis_ws = wb["Analysis"]
 
-# Mapping: Property Numbers (Column D in source) → Row Numbers in "Analysis" Sheet
+# Mapping: Property Numbers (Column D in source) -> Row Numbers in "Analysis" Sheet
 # These are placeholders
 property_mapping = {
     "10": 4,  # Property name
@@ -88,8 +88,6 @@ for prop_num in property_mapping.keys():
     analysis_ws.cell(row=row_number, column=6, value=property_sums_G[prop_num])  # Column F for sums from Column G
     analysis_ws.cell(row=row_number, column=4, value=property_sums_H[prop_num])  # Column H for sums from Column H
     analysis_ws.cell(row=row_number, column=7, value=property_sums_W[prop_num])  # Column G for sums from Column W
-
-
 
 
 # Save the workbook
