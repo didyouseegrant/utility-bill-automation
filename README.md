@@ -2,6 +2,8 @@
 
 This project automates the processing of monthly utility bills for three major service providers: Marin Municipal Water District (MMWD), Marin Sanitary Service (MSS), and PG&E. It streamlines downloading, renaming, parsing, and organizing over 160 utility bills each month using Python and Excel.
 
+For a more detailed look into the project, check out my [Notion case study!](https://www.notion.so/Utility-Bill-Automation-System-Python-Excel-1c9fcf2408d080d3a433f4c094d172f7)
+
 ---
 
 ## Features
