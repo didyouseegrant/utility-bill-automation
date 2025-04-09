@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Define ChromeDriver path
-chrome_driver_path = r"//path//to//your//input//folder//chromedriver.exe"
+chrome_driver_path = r"/path/to/your/input/folder/chromedriver.exe"
 service = Service(chrome_driver_path)
 
 # Define login credentials
@@ -31,7 +31,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 wait = WebDriverWait(driver, 10)  # Set explicit wait
 
 def login():
-    """Logs into PG&E if logged out."""
+    # Logs into PG&E if logged out
     print("Re-logging in...")
     driver.get("https://m.pge.com/#login")
     time.sleep(3)
@@ -51,7 +51,7 @@ def login():
         print(f"Error logging in: {e}")
 
 def is_logged_out():
-    """Checks if the script is logged out by looking for the login form."""
+    # Checks if the script is logged out by looking for the login form
     try:
         # If the username field is present, we're logged out
         driver.find_element(By.ID, "usernameField")
@@ -61,7 +61,7 @@ def is_logged_out():
         return False  # No login form found = still logged in
 
 def handle_popup():
-    """Detects and clicks 'Cancel' on the contact info popup if it appears."""
+    # Detects and clicks 'Cancel' on the contact info popup if it appears
     try:
         popup = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CLASS_NAME, "modal-dialog"))
