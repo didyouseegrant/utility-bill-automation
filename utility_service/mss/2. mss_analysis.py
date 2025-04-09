@@ -62,18 +62,18 @@ for prop_num in property_mapping.keys():
 
 # Copy special values from "Monthly Sorted by Prop" 
 special_transfers = {
-    70: 23,  # Row 70 → Row 23 in Analysis
-    71: 24,  # Row 71 → Row 24 in Analysis
-    72: 25   # Row 72 → Row 25 in Analysis
+    70: 23,  # Row 70 -> Row 23 in Analysis
+    71: 24,  # Row 71 -> Row 24 in Analysis
+    72: 25   # Row 72 -> Row 25 in Analysis
 }
 
 for src_row, dest_row in special_transfers.items():
-    # Transfer F70, F71, F72 → E23, E24, E25
+    # Transfer F70, F71, F72 -> E23, E24, E25
     value_F = source_ws.cell(row=src_row, column=6).value  # Read from Column F
     if value_F is not None:
         analysis_ws.cell(row=dest_row, column=5, value=value_F)  # Write to Column E
 
-    # Transfer S70, S71, S72 → F23, F24, F25
+    # Transfer S70, S71, S72 -> F23, F24, F25
     value_S = source_ws.cell(row=src_row, column=19).value  # Read from Column S
     if value_S is not None:
         analysis_ws.cell(row=dest_row, column=6, value=value_S)  # Write to Column F
